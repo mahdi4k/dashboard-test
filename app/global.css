@@ -1,0 +1,9 @@
+:root {
+    --app-shadow: 0 4px 8px rgba(206, 206, 206, 0.248);
+    /* Light shadow */
+}
+
+[data-mantine-color-scheme='dark'] {
+    --app-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    /* Dark shadow */
+}
