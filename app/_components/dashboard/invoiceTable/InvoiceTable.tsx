@@ -33,7 +33,7 @@ const data = [
   },
   {
     avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-    name: "Henry Silkeater",
+    name: "Henry Silkeater2",
     job: "Designer",
     email: "5h ago",
     role: "Contractor",

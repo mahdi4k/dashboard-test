@@ -24,7 +24,7 @@ const data = [
   },
   {
     avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-    name: "Henry Silkeater",
+    name: "Henry Silkeater3",
     job: "Designer",
     email: "henry@silkeater.io",
     role: "Contractor",
@@ -75,7 +75,7 @@ export function LastTransaction() {
     <GridCol span={{ base: 12, xl: 8 }}>
       <Text fz={"h2"}>Last Transaction</Text>
       <Paper shadow="xs" radius="lg" mt={"lg"} p="xs" py={"lg"}>
-        <Table.ScrollContainer minWidth={600}>
+        <Table.ScrollContainer  minWidth={600}>
           <Table withRowBorders={false} verticalSpacing="xs">
             <Table.Tbody>{rows}</Table.Tbody>
           </Table>

@@ -38,8 +38,8 @@ export function Stats() {
             <Text c="dimmed" size="xs" tt="uppercase" fw={700}>
               {stat.label}
             </Text>
-            <Text fw={700} size="2xl">
-              {stat.stats}
+            <Text size="2xl" fw={500}>
+              ${stat.stats}
             </Text>
           </div>
         </Group>

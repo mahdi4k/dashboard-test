@@ -17,7 +17,7 @@ const DebitChart = () => {
   console.log("🚀 ~ DebitChart ~ dir:", dir);
 
   return (
-    <GridCol span={{base:12,xl:8}}>
+    <GridCol span={{ base: 12, xl: 8 }}>
       <Text fz={"h2"}>Debit & Credit Overview</Text>
       <Paper shadow="xs" radius="lg" mt={"lg"} p="xs" py={"lg"}>
         <Flex gap={"xs"} fw={"bold"} justify={dir === "rtl" ? "flex-end" : "flex-start"}>
@@ -37,6 +37,7 @@ const DebitChart = () => {
             { name: "Laptops", color: "blue.6" },
             { name: "Tablets", color: "teal.6" },
           ]}
+          barProps={{ radius: 10 }}
           tickLine="y"
         />
       </Paper>

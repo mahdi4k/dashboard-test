@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Icon2fa,
   IconBellRinging,
@@ -18,24 +18,26 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import classes from "./AppNavbar.module.css";
-
-const tabs = {
-  account: [
-    { link: "", label: "Notifications", icon: IconBellRinging },
-    { link: "", label: "Billing", icon: IconReceipt2 },
-    { link: "", label: "Security", icon: IconFingerprint },
-    { link: "", label: "SSH Keys", icon: IconKey },
-    { link: "", label: "Databases", icon: IconDatabaseImport },
-    { link: "", label: "Authentication", icon: Icon2fa },
-    { link: "", label: "Other Settings", icon: IconSettings },
-  ],
-   
-};
+import { useTranslations } from "next-intl";
+import { Box } from "@mantine/core";
 
 export function MainNavbar() {
-   const [active, setActive] = useState("Billing");
+  const [active, setActive] = useState("Billing");
+  const t = useTranslations("Navigation");
 
-  const links = tabs['account'].map((item) => (
+  const tabs = useMemo(() => ({
+    account: [
+      { link: "", label: t("notifications"), icon: IconBellRinging },
+      { link: "", label: t("billing"), icon: IconReceipt2 },
+      { link: "", label: t("security"), icon: IconFingerprint },
+      { link: "", label: t("ssh_keys"), icon: IconKey },
+      { link: "", label: t("databases"), icon: IconDatabaseImport },
+      { link: "", label: t("authentication"), icon: Icon2fa },
+      { link: "", label: t("other_settings"), icon: IconSettings },
+    ],
+  }), [t]);
+
+  const links = tabs["account"].map((item) => (
     <a
       className={classes.link}
       data-active={item.label === active || undefined}
@@ -56,10 +58,10 @@ export function MainNavbar() {
       <div className={classes.navbarMain}>{links}</div>
 
       <div className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
+        <Box component="a" href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
           <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
-        </a>
+        </Box>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
           <IconLogout className={classes.linkIcon} stroke={1.5} />
