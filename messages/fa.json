@@ -1,0 +1,20 @@
+{
+  "Home": {
+    "title": "به صفحه اصلی خوش آمدید"
+  },
+  "Navigation": {
+    "dashboard": "داشبورد",
+    "transactions": "تراکنش‌ها",
+    "investments": "سرمایه‌گذاری‌ها",
+    "credit_cards": "کارت‌های اعتباری",
+    "loans": "وام‌ها",
+    "accounts": "حساب ها",
+    "notifications": "اعلانات",
+    "billing": "پرداخت",
+    "security": "امنیت",
+    "ssh_keys": "کلید های SSH",
+    "databases": "دیتابیس ها",
+    "authentication": "احراز هویت",
+    "other_settings": "تنظیمات دیگر"
+  }
+}
