@@ -5,20 +5,33 @@ import { LastTransaction } from "./_components/dashboard/lastTransaction/LastTra
 import CreditCard from "./_components/dashboard/creditCard/CreditCard";
 import DebitChart from "./_components/dashboard/debitChart/DebitChart";
 import { InvoiceTable } from "./_components/dashboard/invoiceTable/InvoiceTable";
+import { DashboardErrorBoundary } from "./_components/dashboard/DashboardErrorBoundary";
 
 export default function HomePage() {
   return (
     <Box>
       <MainAppShell>
         <Stack>
-          <Stats />
+          <DashboardErrorBoundary sectionName="Statistics">
+            <Stats />
+          </DashboardErrorBoundary>
+          
           <Grid mt={"xl"}>
-            <LastTransaction />
-            <CreditCard />
+            <DashboardErrorBoundary sectionName="Last Transaction">
+              <LastTransaction />
+            </DashboardErrorBoundary>
+            <DashboardErrorBoundary sectionName="Credit Card">
+              <CreditCard />
+            </DashboardErrorBoundary>
           </Grid>
+          
           <Grid mt={"xl"}>
-            <DebitChart />
-            <InvoiceTable/>
+            <DashboardErrorBoundary sectionName="Debit Chart">
+              <DebitChart />
+            </DashboardErrorBoundary>
+            <DashboardErrorBoundary sectionName="Invoice Table">
+              <InvoiceTable/>
+            </DashboardErrorBoundary>
           </Grid>
         </Stack>
       </MainAppShell>
