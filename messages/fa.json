@@ -16,5 +16,43 @@
     "databases": "دیتابیس ها",
     "authentication": "احراز هویت",
     "other_settings": "تنظیمات دیگر"
+  },
+  "credit": {
+    "title": "کارت اعتباری",
+    "balance": "مانده",
+    "valid_thru": "منقضی شدن",
+    "card_holder": "مالک کارت",
+    "see_all": "مشاهده همه",
+    "debited": "صرفه جویی شدن",
+    "credited": "اعتباری شدن"
+  },
+  "debit": {
+    "title": "نمودار صرفه جویی",
+    "balance": "مانده",
+    "valid_thru": "منقضی شدن",
+    "card_holder": "مالک کارت",
+    "see_all": "مشاهده همه",
+    "debited": "صرفه جویی شدن",
+    "credited": "اعتباری شدن"
+  },
+  "invoice": {
+    "title": "صورتحساب ها",
+    "see_all": "مشاهده همه"
+  },
+  "last_transaction": {
+    "title": "آخرین تراکنش ها",
+    "see_all": "مشاهده همه"
+  },
+  "stats": {
+    "title": "آمار",
+    "see_all": "مشاهده همه",
+    "page_views": "بازدیدها",
+    "new_users": "کاربران جدید",
+    "orders": "سفارشات",
+    "orderss": "سفارشات",
+    "currency": "تومان"
+  },
+  "header": {
+    "search": "جستجو"
   }
 }

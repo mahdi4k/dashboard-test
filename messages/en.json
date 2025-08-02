@@ -16,5 +16,38 @@
     "databases": "Databases",
     "authentication": "Authentication",
     "other_settings": "Other Settings"
+  },
+  "stats": {
+    "title": "Stats",
+    "see_all": "See All",
+    "page_views": "Page Views",
+    "new_users": "New Users",
+    "orders": "Orders",
+    "orderss": "Orderss",
+    "currency": "$"
+  },
+  "credit": {
+    "title": "Credit Card",
+    "balance": "Balance",
+    "valid_thru": "Valid Thru",
+    "card_holder": "Card Holder",
+    "see_all": "See All"
+  },
+  "debit": {
+    "title": "Debit & Credit Overview",
+    "debited": "Debited &",
+    "credited": "Credited this Week",
+    "see_all": "See All"
+  },
+  "invoice": {
+    "title": "Invoices Sent",
+    "see_all": "See All"
+  },
+  "last_transaction": {
+    "title": "Last Transaction",
+    "see_all": "See All"
+  },
+  "header": {
+    "search": "Search"
   }
 }

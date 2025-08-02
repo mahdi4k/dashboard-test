@@ -16,6 +16,11 @@ const myColor: MantineColorsTuple = [
 ];
 
 export const theme = createTheme({
+  fontFamily: 'var(--font-vazirmatn), system-ui, sans-serif',
+  headings: {
+    fontFamily: 'var(--font-vazirmatn), system-ui, sans-serif',
+  },
+
   colors: {
     kiwi: myColor,
   },

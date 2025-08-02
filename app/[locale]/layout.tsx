@@ -6,6 +6,15 @@ import React from "react";
 import { MantineProvider, ColorSchemeScript, mantineHtmlProps, DirectionProvider } from "@mantine/core";
 import { theme } from "../../theme";
 import { NextIntlClientProvider } from "next-intl";
+import { Vazirmatn } from "next/font/google";
+
+const vazirmatn = Vazirmatn({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-vazirmatn",
+  display: "swap",
+
+});
 
 export const metadata = {
   title: "Mantine Next.js template",
@@ -25,7 +34,7 @@ export default async function RootLayout({
   const direction = locale === "fa" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction} {...mantineHtmlProps} suppressHydrationWarning>
+    <html className={vazirmatn.className} lang={locale} dir={direction} {...mantineHtmlProps} suppressHydrationWarning>
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
@@ -34,7 +43,9 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <DirectionProvider initialDirection={direction}>
-            <MantineProvider theme={theme}>{children}</MantineProvider>
+            <MantineProvider theme={theme}>
+              {children}
+            </MantineProvider>
           </DirectionProvider>
         </NextIntlClientProvider>
       </body>

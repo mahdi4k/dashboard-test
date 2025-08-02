@@ -2,6 +2,7 @@
 
 import { Avatar, Badge, Box, GridCol, Group, Paper, Table, Text } from "@mantine/core";
 import { IconApple } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 const data = [
   {
@@ -36,6 +37,7 @@ const data = [
 const rolesData = ["Manager", "Collaborator", "Contractor"];
 
 export function LastTransaction() {
+  const t = useTranslations("last_transaction");
   const rows = data.map((item, i) => (
     <Table.Tr key={item.name}>
       <Table.Td>
@@ -73,7 +75,7 @@ export function LastTransaction() {
 
   return (
     <GridCol span={{ base: 12, xl: 8 }}>
-      <Text fz={"h2"}>Last Transaction</Text>
+      <Text fz={"h2"}>{t("title")}</Text>
       <Paper shadow="xs" radius="lg" mt={"lg"} p="xs" py={"lg"}>
         <Table.ScrollContainer  minWidth={600}>
           <Table withRowBorders={false} verticalSpacing="xs">

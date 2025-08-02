@@ -2,6 +2,7 @@
 
 import { Avatar, Badge, Box, GridCol, Group, Paper, Select, Table, Text } from "@mantine/core";
 import { IconAlbum, IconApple } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 const data = [
   {
@@ -43,6 +44,7 @@ const data = [
 ];
 
 export function InvoiceTable() {
+  const t = useTranslations("invoice");
   const rows = data.map((item) => (
     <Table.Tr key={item.name}>
       <Table.Td>
@@ -69,7 +71,7 @@ export function InvoiceTable() {
 
   return (
     <GridCol span={{ base: 12, xl: 4 }}>
-      <Text fz={"h2"}>Invoices Sent</Text>
+      <Text fz={"h2"}>{t("title")}</Text>
       <Paper shadow="xs" radius="lg" mt={"lg"} p="xs" py={"lg"}>
         <Table withRowBorders={false} verticalSpacing="lg">
           <Table.Tbody>{rows}</Table.Tbody>

@@ -15,7 +15,7 @@ export function MainAppShell({ children }: { children: React.ReactNode }) {
     <AppShell
       layout="alt"
       header={{ height: 60 }}
-      navbar={{ width: { base: 20, lg: 300 }, breakpoint: "sm", collapsed: { mobile: !opened, desktop: !opened } }}
+      navbar={{ width: { base: 20, lg: 250 }, breakpoint: "lg", collapsed: { mobile: !opened, desktop: !opened } }}
       padding="md"
     >
       <AppShell.Header>
