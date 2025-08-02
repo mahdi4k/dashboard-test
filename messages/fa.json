@@ -24,7 +24,9 @@
     "card_holder": "مالک کارت",
     "see_all": "مشاهده همه",
     "debited": "صرفه جویی شدن",
-    "credited": "اعتباری شدن"
+    "credited": "اعتباری شدن",
+    "balance_amount": "5,756",
+    "currency": "تومان"
   },
   "debit": {
     "title": "نمودار صرفه جویی",
@@ -41,7 +43,12 @@
   },
   "last_transaction": {
     "title": "آخرین تراکنش ها",
-    "see_all": "مشاهده همه"
+    "see_all": "مشاهده همه",
+    "last_active": "2 روز پیش",
+    "job": "مهندس",
+    "role": "همکار",
+    "balance_amount": "780",
+    "currency": "تومان"
   },
   "stats": {
     "title": "آمار",

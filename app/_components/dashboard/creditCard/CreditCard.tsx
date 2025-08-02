@@ -19,7 +19,7 @@ const CreditCard = () => {
           <Group justify="space-between" align="flex-start" p={"md"} pt={'lg'}>
             <Box>
               <Text className={classes.balanceLabel}>{t("balance")}</Text>
-              <Text className={classes.balanceAmount}>$5,756</Text>
+              <Text className={classes.balanceAmount}>{t("balance_amount")} {t("currency")}</Text>
             </Box>
             <Box className={classes.chipContainer}>
               <Box className={classes.chip} />

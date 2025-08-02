@@ -63,8 +63,9 @@ export function Stats() {
                 </>
               ) : (
                 <>
-                  {formatted}
                   <Box component="span">{t("currency")}</Box>
+
+                  {formatted}
                 </>
               )}
             </Text>

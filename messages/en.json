@@ -31,13 +31,17 @@
     "balance": "Balance",
     "valid_thru": "Valid Thru",
     "card_holder": "Card Holder",
-    "see_all": "See All"
+    "see_all": "See All",
+    "balance_amount": "5,756",
+    "currency": "$"
   },
   "debit": {
     "title": "Debit & Credit Overview",
     "debited": "Debited &",
     "credited": "Credited this Week",
-    "see_all": "See All"
+    "see_all": "See All",
+    "balance_amount": "5,756",
+    "currency": "$"
   },
   "invoice": {
     "title": "Invoices Sent",
@@ -45,7 +49,12 @@
   },
   "last_transaction": {
     "title": "Last Transaction",
-    "see_all": "See All"
+    "see_all": "See All",
+    "last_active": "2 days ago",
+    "job": "Engineer",
+    "role": "Collaborator",
+    "balance_amount": "780",
+    "currency": "$"
   },
   "header": {
     "search": "Search"
