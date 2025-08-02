@@ -8,7 +8,7 @@ export default function HomeRedirect() {
 
   useEffect(() => {
     const stored = localStorage.getItem('locale');
-    const fallback = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'fa';
+    const fallback = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
     router.replace(`/${stored ?? fallback}`);
   }, []);
 
