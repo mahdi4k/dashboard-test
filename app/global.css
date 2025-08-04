@@ -1,3 +1,6 @@
+@import "tailwind-preset-mantine";
+
+
 :root {
     --app-shadow: 0 4px 8px rgba(206, 206, 206, 0.248);
     /* Light shadow */

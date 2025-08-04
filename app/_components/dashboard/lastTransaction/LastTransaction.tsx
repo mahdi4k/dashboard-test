@@ -1,14 +1,25 @@
 "use client";
 
-import { Avatar, Badge, Box, GridCol, Group, Paper, Table, Text } from "@mantine/core";
+import { Avatar, Badge, Box, GridCol, Group, Paper, Skeleton, Table, Text, Transition } from "@mantine/core";
 import { IconApple } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 const rolesData = ["Manager", "Collaborator", "Contractor"];
 
 export function LastTransaction() {
   const t = useTranslations("last_transaction");
+  const [mounted, setMounted] = useState(false);
+  const [showSkeleton, setShowSkeleton] = useState(true);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowSkeleton(false);
+      setMounted(true);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const data = [
     {
       avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
@@ -76,14 +87,20 @@ export function LastTransaction() {
 
   return (
     <GridCol span={{ base: 12, xl: 8 }}>
-      <Text fz={"h2"}>{t("title")}</Text>
-      <Paper shadow="xs" radius="lg" mt={"lg"} p="xs" py={"lg"}>
-        <Table.ScrollContainer minWidth={600}>
-          <Table withRowBorders={false} verticalSpacing="xs">
-            <Table.Tbody>{rows}</Table.Tbody>
-          </Table>
-        </Table.ScrollContainer>
-      </Paper>
+      <Text fz="h2">{t("title")}</Text>
+      {showSkeleton && <Skeleton height={300} radius="lg" mt="lg" />}
+
+      <Transition mounted={mounted} transition="fade" duration={400} timingFunction="ease">
+        {(styles) => (
+          <Paper style={styles} shadow="xs" radius="lg" mt="lg" p="xs" py="lg">
+            <Table.ScrollContainer minWidth={600}>
+              <Table withRowBorders={false} verticalSpacing="xs">
+                <Table.Tbody>{rows}</Table.Tbody>
+              </Table>
+            </Table.ScrollContainer>
+          </Paper>
+        )}
+      </Transition>
     </GridCol>
   );
 }
